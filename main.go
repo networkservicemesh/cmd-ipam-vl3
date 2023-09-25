@@ -1,4 +1,4 @@
-// Copyright (c) 2022 Cisco and/or its affiliates.
+// Copyright (c) 2022-2023 Cisco and/or its affiliates.
 //
 // SPDX-License-Identifier: Apache-2.0
 //
@@ -22,6 +22,7 @@ import (
 	"os"
 	"os/signal"
 	"syscall"
+	"time"
 
 	nested "github.com/antonfisher/nested-logrus-formatter"
 	"github.com/kelseyhightower/envconfig"
@@ -42,11 +43,12 @@ import (
 
 // Config represents the configuration for cmd-map-ip-k8s application
 type Config struct {
-	ListenOn              []url.URL `default:"unix:///listen.on.socket" desc:"url to listen on." split_words:"true"`
-	LogLevel              string    `default:"INFO" desc:"Log level" split_words:"true"`
-	OpenTelemetryEndpoint string    `default:"otel-collector.observability.svc.cluster.local:4317" desc:"OpenTelemetry Collector Endpoint"`
-	Prefix                string    `default:"169.254.0.0/16" desc:"CIDR Prefix to allocate CIDR prefixes for clients" split_words:"true"`
-	ClientPrefixLen       uint8     `default:"24" desc:"Default len of clients prefix" split_words:"true"`
+	ListenOn              []url.URL     `default:"unix:///listen.on.socket" desc:"url to listen on." split_words:"true"`
+	LogLevel              string        `default:"INFO" desc:"Log level" split_words:"true"`
+	OpenTelemetryEndpoint string        `default:"otel-collector.observability.svc.cluster.local:4317" desc:"OpenTelemetry Collector Endpoint"`
+	MetricsExportInterval time.Duration `default:"10s" desc:"interval between mertics exports" split_words:"true"`
+	Prefix                string        `default:"169.254.0.0/16" desc:"CIDR Prefix to allocate CIDR prefixes for clients" split_words:"true"`
+	ClientPrefixLen       uint8         `default:"24" desc:"Default len of clients prefix" split_words:"true"`
 }
 
 func main() {
@@ -96,7 +98,7 @@ func main() {
 	if opentelemetry.IsEnabled() {
 		collectorAddress := config.OpenTelemetryEndpoint
 		spanExporter := opentelemetry.InitSpanExporter(ctx, collectorAddress)
-		metricExporter := opentelemetry.InitMetricExporter(ctx, collectorAddress)
+		metricExporter := opentelemetry.InitOPTLMetricExporter(ctx, collectorAddress, config.MetricsExportInterval)
 		o := opentelemetry.Init(ctx, spanExporter, metricExporter, os.Args[0])
 		defer func() {
 			if err = o.Close(); err != nil {
