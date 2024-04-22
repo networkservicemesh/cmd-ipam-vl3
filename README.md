@@ -26,6 +26,17 @@ Testing is run via a Docker container.  To run testing run:
 docker run --privileged --rm $(docker build -q --target test .)
 ```
 
+# Usage
+
+## Environment config
+
+* `NSM_LISTEN_ON`               - url to listen on.
+* `NSM_LOG_LEVEL`               - Log level
+* `NSM_OPEN_TELEMETRY_ENDPOINT` - OpenTelemetry Collector Endpoint
+* `NSM_METRICS_EXPORT_INTERVAL` - interval between mertics exports
+* `NSM_PREFIX`                  - CIDR Prefix to allocate CIDR prefixes for clients
+* `NSM_CLIENT_PREFIX_LEN`       - Default len of clients prefix
+
 # Debugging
 
 ## Debugging the tests
