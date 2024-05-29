@@ -5,8 +5,8 @@ go 1.20
 require (
 	github.com/antonfisher/nested-logrus-formatter v1.3.1
 	github.com/kelseyhightower/envconfig v1.4.0
-	github.com/networkservicemesh/api v1.13.1-0.20240424210452-d0df98851760
-	github.com/networkservicemesh/sdk v0.5.1-0.20240529105330-c01f9e100851
+	github.com/networkservicemesh/api v1.13.1-rc.3
+	github.com/networkservicemesh/sdk v1.13.1-rc.3
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spiffe/go-spiffe/v2 v2.1.7
 	google.golang.org/grpc v1.60.1
@@ -30,7 +30,6 @@ require (
 	github.com/prometheus/common v0.44.0 // indirect
 	github.com/prometheus/procfs v0.11.1 // indirect
 	github.com/zeebo/errs v1.3.0 // indirect
-	go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc v0.46.0 // indirect
 	go.opentelemetry.io/otel v1.20.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlpmetric/otlpmetricgrpc v0.43.0 // indirect
 	go.opentelemetry.io/otel/exporters/otlp/otlptrace v1.20.0 // indirect
