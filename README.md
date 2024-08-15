@@ -36,6 +36,8 @@ docker run --privileged --rm $(docker build -q --target test .)
 * `NSM_METRICS_EXPORT_INTERVAL` - interval between mertics exports
 * `NSM_PREFIX`                  - CIDR Prefix to allocate CIDR prefixes for clients
 * `NSM_CLIENT_PREFIX_LEN`       - Default len of clients prefix
+* `NSM_PPROF_ENABLED`           - is pprof enabled (default: "false")
+* `NSM_PPROF_LISTEN_ON`         - pprof URL to ListenAndServe (default: "localhost:6060")
 
 # Debugging
 
