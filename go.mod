@@ -6,7 +6,7 @@ require (
 	github.com/antonfisher/nested-logrus-formatter v1.3.1
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/networkservicemesh/api v1.13.4-0.20240815101554-fdbfcd84fd0e
-	github.com/networkservicemesh/sdk v0.5.1-0.20241017234257-9a6b64bb5f81
+	github.com/networkservicemesh/sdk v0.5.1-0.20241017235226-a17a4feafcc5
 	github.com/sirupsen/logrus v1.9.0
 	github.com/spiffe/go-spiffe/v2 v2.1.7
 	google.golang.org/grpc v1.60.1
@@ -44,7 +44,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	golang.org/x/crypto v0.21.0 // indirect
 	golang.org/x/mod v0.10.0 // indirect
-	golang.org/x/net v0.21.0 // indirect
+	golang.org/x/net v0.23.0 // indirect
 	golang.org/x/sys v0.18.0 // indirect
 	golang.org/x/text v0.14.0 // indirect
 	golang.org/x/tools v0.9.3 // indirect
