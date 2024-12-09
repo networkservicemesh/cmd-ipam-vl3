@@ -44,10 +44,10 @@ github.com/kelseyhightower/envconfig v1.4.0 h1:Im6hONhd3pLkfDFsbRgu68RDNkGF1r3dv
 github.com/kelseyhightower/envconfig v1.4.0/go.mod h1:cccZRl6mQpaq41TPp5QxidR+Sa3axMbJDNb//FQX6Gg=
 github.com/matttproud/golang_protobuf_extensions v1.0.4 h1:mmDVorXM7PCGKw94cs5zkfA9PSy5pEvNWRP0ET0TIVo=
 github.com/matttproud/golang_protobuf_extensions v1.0.4/go.mod h1:BSXmuO+STAnVfrANrmjBb36TMTDstsz7MSK+HVaYKv4=
-github.com/networkservicemesh/api v1.14.2-rc.1.0.20241209080353-bbb4cd5f8f00 h1:xZGg3H5j9UoQW7GasoQrBtH4RkB9bgKdfuRIM9EUkCQ=
-github.com/networkservicemesh/api v1.14.2-rc.1.0.20241209080353-bbb4cd5f8f00/go.mod h1:GT0Yw1LYFSTxlDyJjBDhIxT82rJ2czZ0TiyzxSyKzvg=
-github.com/networkservicemesh/sdk v0.5.1-0.20241209114224-1e611de3145f h1:vlD2bVrPbOV1ICkBtAUB6HAcPDH0I3SNDIYJdcaGYrM=
-github.com/networkservicemesh/sdk v0.5.1-0.20241209114224-1e611de3145f/go.mod h1:T8IWsaj52yYieCipr0rOViAzWPo7Mc83jI7q61OUFvM=
+github.com/networkservicemesh/api v1.14.2-rc.1 h1:m2efoCNFebl6iVoST70SaGPTqgv/woHMQR0csmJ3uyM=
+github.com/networkservicemesh/api v1.14.2-rc.1/go.mod h1:GT0Yw1LYFSTxlDyJjBDhIxT82rJ2czZ0TiyzxSyKzvg=
+github.com/networkservicemesh/sdk v1.14.2-rc.1 h1:Xf/eUfzQNBDWZcOsqwer/6Zky+HH9MyX7erfadX71YU=
+github.com/networkservicemesh/sdk v1.14.2-rc.1/go.mod h1:SfccFwcMWl81JZ7fTKTHueBIWsx7DPQiLePcpnW2H6U=
 github.com/pkg/errors v0.9.1 h1:FEBLx1zS214owpjy7qsBeixbURkuhQAwrK5UwLGTwt4=
 github.com/pkg/errors v0.9.1/go.mod h1:bwawxfHBFNV+L2hUp1rHADufV3IMtnDRdf1r5NINEl0=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
